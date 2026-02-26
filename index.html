@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>清水良成 | 株式会社 ソニックジャパン さいたま支店</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://www.google.com/recaptcha/api.js"async defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&display=swap"
         rel="stylesheet"> <!-- アイコン用（FontAwesome） -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -73,19 +74,30 @@
                     class="bg-white/80 W-full max-w-4xl mx-auto px-8 py-6 rounded-3xl mb-12 border-4 border-white shadow-md backdrop-blur-sm">
                     <div class="mb-8">
     <div class="bg-white/80 w-full px-8 py-8 rounded-3xl shadow-sm backdrop-blur-sm">
-        <h1 class="text-brand-mint font-black text-2xl md:text-4xl tracking-wide">
-            「なんとなく」<br class="md:hidden">ではなく、
-            <span class="block mt-4">「納得して」<br class="md:hidden">選べる保障へ。</span>
+        <h1 class="text-brand-mint font-black text-[20px] sm:text-2xl md:text-4xl tracking-normal md:tracking-wide leading-tight text-left md:text-center -ml-3 md:ml-0">
+            <span class="block whitespace-nowrap">「なんとなく」ではなく、</span>
+            <span class="block mt-4 whitespace-nowrap">「納得して」選べる保障へ。</span>
         </p>
     </div>
 
-    <p class="text-lg md:text-xl font-bold text-brand-blue mt-4">
-        まずは公的制度を整理し、そのうえで、<br class="md:hidden">
+    <p class="text-sm sm:text-base md:text-xl font-bold text-brand-blue mt-4 leading-relaxed">
+        <span class="block md:inline">
+        まずは公的制度を整理し、そのうえで、
+        </span>
+        <span class="block md:inline md:ml-2 mt-2 md:mt-0">
         あなたにとって最適な選択へ導きます。
+        </span>
+        </p>
     </p>
-    <p class="mt-6 text-base md:text-lg font-bold text-gray-600 mb-6">
-    保障は「入っていること」よりも、<br class="md:hidden">
-    <span class="bg-yellow-200/50 px-1">「理解していること」こそが大切です。</span>
+    <p class="mt-6 text-base md:text-lg front-bold text-gray-600 mb-6 leading-relaxed">
+     <span class="block md:inline">
+    保障は「入っていること」よりも、
+    </span>
+    <span class="block md:inline md:ml-2">
+    <span class="bg-yellow-200/50 px-1">
+    「理解していること」</span>
+    <span class="whitespace-nowrap">こそが大切です。</span>
+  </span>
 </div>
             </div>
            
@@ -119,10 +131,10 @@
 
     <!-- 資格 -->
     <div class="flex flex-wrap justify-center gap-3 mb-6 max-w-lg">
-      <span class="text-sm bg-green-50/60 text-brand-mint border border-green-200 px-3 py-1.5 rounded-full font-bold">
+      <span class="text-xs sm:text-sm bg-green-50/60 text-brand-mint border border-green-200 px-3 py-1.5 rounded-full font-bold">
         2級ファイナンシャル・プランニング技能士
       </span>
-      <span class="text-sm bg-green-50/60 text-brand-mint border border-green-200 px-3 py-1.5 rounded-full font-bold">
+      <span class="text-sm bg-green-50/60 text-brand-mint border border-green-200 px-2.5 py-1 rounded-full font-bold whitespace-nowrap">
         AFP(日本FP協会会員)
       </span>
       <span class="text-sm bg-green-50/60 text-brand-mint border border-green-200 px-3 py-1.5 rounded-full font-bold">
@@ -137,22 +149,36 @@
     </div>
 
     <!-- メッセージ（バージョンA） -->
-    <div class="w-full text-center bg-green-50/80 p-6 rounded-3xl border border-green-100">
-      <p class="font-bold leading-relaxed text-brand-blue">
-        公的制度をわかりやすく整理し、<br>
-        そのうえで、あなたに本当に必要な保障を一緒に考えます。<br><br>
-        そして定期的な見直しにより、<br>
-        <span class="text-lg font-bold text-brand-mint">
-          その時々に合った最適な状態を保ちます。
-        </span>
-      </p>
+    <div class="w-full max-w-md md:max-w-none text-center bg-green-50/80 p-6 md:p-6 rounded-3xl border border-green-100 mx-auto">
+     <div class="font-bold text-[13px] sm:text-[12px] md:text-base leading-6 md:leading-relaxed text-brand-blue text-center">
+
+  <!-- PC用（md以上）：上2行 -->
+  <div class="hidden md:block space-y-2">
+    <div>公的制度をわかりやすく整理し、</div>
+    <div>そのうえで、あなたに本当に必要な保障を一緒に考えます。</div>
+  </div>
+
+  <!-- スマホ用（md未満）：上3行 -->
+  <div class="md:hidden space-y-2">
+    <div>公的制度をわかりやすく整理し、</div>
+    <div>そのうえで、あなたに本当に必要な</div>
+    <div>保障を一緒に考えます。</div>
+  </div>
+
+  <!-- ここで区切る（共通） -->
+  <div class="mt-8 md:mt-8 space-y-2">
+    <div>そして定期的な見直しにより、</div>
+    <div class="text-brand-mint front-semibold md:text-lg whitespace-nowrap tracking-tight">その時々に合った最適な状態を保ちます。</div>
+  </div>
+
+</div>
     </div>
 
   </div>
 </div>
     </header> <!-- 【2枚目】対応分野（3×2・改行統一・アイコン少し大きく） -->
-<section class="py-0 px-4">
-    <div class="bg-white/80 w-full rounded-3xl p-10 shadow-xl border-4 border-white max-w-4xl mx-auto text-center">
+<section class="py-0 px-2 md:px-4">
+    <div class="bg-white/80 w-full max-w-sm mx-auto rounded-3xl p-6 md:p-10 shadow-xl border-4 border-white md:max-w-4xl md:mx-auto text-center">
     <span class="text-brand-mint font-bold tracking-widest text-sm">SERVICE</span>
     <h2 class="text-2xl md:text-3xl font-black text-brand-blue mb-10">対応分野</h2>
 
@@ -221,9 +247,9 @@
     </div>
   </div>
    <!-- 自己紹介（PROFILE）最適化版 -->
-<section class="py-12 px-4">
-  <div class="max-w-4xl mx-auto">
-    <div class="bg-white rounded-3xl p-10 shadow-md">
+<section class="py-12 px-2 md:px-4">
+  <div class="w-full max-w-sm mx-auto md:max-w-4xl">
+    <div class="bg-white rounded-3xl p-4 md:p-10 shadow-md">
       
       <div class="text-center mb-10">
         <span class="text-brand-mint font-bold tracking-widest text-sm block mb-2">PROFILE</span>
@@ -288,8 +314,8 @@
   </div>
 </section>
            <!-- 面談方法について -->
-<section class="py-0 px-4">
-  <div class="max-w-4xl mx-auto">
+<section class="py-0 px-2 md:px-4">
+  <div class="w-full md:max-w-4xl md:mx-auto">
     <div class="bg-white rounded-[32px] p-6 md:p-8 shadow-lg border border-gray-100">
       
       <div class="text-center mb-10">
@@ -344,15 +370,7 @@
           </p>
         </div>
       </div>
-
-      <!-- CTA -->
-      <div class="mt-10 text-center">
-        <a href="#contact" class="inline-flex items-center justify-center bg-brand-mint text-white font-black text-base md:text-lg px-8 py-4 rounded-full shadow-lg hover:bg-emerald-600 transition">
-          ご相談方法を選んで問い合わせる
-        </a>
-      </div>
-
-    </div>
+     </div>
   </div>
 </section>
     
@@ -405,6 +423,7 @@
                     <textarea id="message" name="message" rows="5"
                         class="w-full bg-[#f9fafb] border border-gray-200 rounded-[20px] px-5 py-4 focus:outline-none focus:border-brand-mint focus:bg-white transition"
                         placeholder="ご自由にご記入ください"></textarea> </div>
+                        <div class="g-recaptcha" data-sitekey="6Lc9LngsAAAAAP8ZOYrlD0KxVAN1tjl9LiFyJoLQ"></div>
                 <div class="pt-4"> <button type="submit"
                         class="w-full bg-brand-mint text-white font-bold text-lg py-4 rounded-full shadow-lg hover:bg-emerald-600 transition transform hover:-translate-y-0.5">
                         送信する </button> </div>
