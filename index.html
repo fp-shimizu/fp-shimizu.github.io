@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>清水良成 | 株式会社 ソニックジャパン さいたま支店</title>
+    <title>清水良成 | 人生とお金の道しるべ</title>
+    <meta name="description" content="教職員の方から多くご相談をいただいています。ライフプランニング・保険見直し・資産形成など、LINEでお気軽にお問合せください。">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://www.google.com/recaptcha/api.js"async defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&display=swap"
@@ -55,18 +56,45 @@
             background-color: #10b981;
             border-radius: 50%;
         }
+        @media print {
+          /*①印刷ではナビを消す*/
+          nav {
+            display: none !important;
+          }
+        /*②ナビ分の余白を戻す*/
+        header {
+           padding-top: 0 !important;
+        }
+        header .bg-pattern {
+           display: none !important;
+        }
+        header div {
+           position: static !important;
+        }     
+        header {
+           break-inside: avoid; page-break-inside: avoid;
+        }   
+          
+        }
     </style>
 </head>
 
 <body class="text-brand-blue bg-pattern"> <!-- ナビゲーション -->
     <nav class="bg-white/90 backdrop-blur-md fixed w-full z-50 shadow-sm border-b border-gray-100">
         <div class="max-w-5xl mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="text-xs font-bold text-gray-500 leading-tight"> 株式会社ソニックジャパン<br>さいたま支店 </div> <a href="#contact"
+            <div class="leading-tight">
+              <div class="text-sm front-semibold text-gray-800">
+                清水 良成
+              </div>
+              <div class="text-xs text-gray-400">
+                人生とお金の道しるべ
+              </div>
+            </div><a href="#contact"
                 class="bg-brand-mint text-white text-sm font-bold px-4 py-2 rounded-full hover:bg-emerald-600 transition shadow-sm">
-                無料相談・お問合せ </a>
+                ご相談はこちら</a>
         </div>
     </nav> <!-- 【1枚目】ヒーローセクション & コンセプト -->
-    <header class="pt-28 pb-4 px-4">
+    <header class="pt-24 pb-4 px-4">
         <div class="bg-pattern absolute inset-0 opacity-10 pointer-events-none"></div>
         <div class="max-w-4xl mx-auto text-center relative z-10"> <!-- キャッチコピー -->
             <div class="mb-8">
@@ -74,9 +102,12 @@
                     class="bg-white/80 W-full max-w-4xl mx-auto px-8 py-6 rounded-3xl mb-12 border-4 border-white shadow-md backdrop-blur-sm">
                     <div class="mb-8">
     <div class="bg-white/80 w-full px-8 py-8 rounded-3xl shadow-sm backdrop-blur-sm">
-        <h1 class="text-brand-mint font-black text-[20px] sm:text-2xl md:text-4xl tracking-normal md:tracking-wide leading-tight text-left md:text-center -ml-3 md:ml-0">
-            <span class="block whitespace-nowrap">「なんとなく」ではなく、</span>
-            <span class="block mt-4 whitespace-nowrap">「納得して」選べる保障へ。</span>
+      <div class="flex justify-center">
+        <h1 class="inline-block text-center text-brand-mint font-black text-2xl sm:text-3xl md:text-4xl tracking-tight tracking-normal md:tracking-wide">
+            <span class="block whitespace-nowrap mx-auto">「なんとなく」ではなく、</span>
+            <span class="block whitespace-nowrap mt-4">「納得して」選べる保障へ。</span>
+        </h1>
+      </div>
         </p>
     </div>
 
@@ -89,12 +120,12 @@
         </span>
         </p>
     </p>
-    <p class="mt-6 text-sm sm:text-base md:text-lg front-bold text-gray-700 mb-6 leading-relaxed">
+    <p class="mt-6 text-sm sm:text-base md:text-lg front-bold text-gray-800 mb-6 leading-relaxed">
      <span class="block md:inline">
     保障は「入っていること」よりも、
     </span>
     <span class="block md:inline md:ml-2">
-    <span class="bg-yellow-200/50 px-1">
+    <span class="bg-yellow-200/50 px-1 rounded font-bold">
     「理解していること」</span>
     <span class="whitespace-nowrap">こそが大切です。</span>
   </span>
@@ -102,9 +133,9 @@
             </div>
            
 </p> <!-- 担当者紹介カード -->
-<div class="bg-white w-full rounded-3xl p-8 shadow-xl border-4 border-white max-w-4xl mx-auto text-[18px]">
-  <p class="text-sm font-bold text-brand-mint mb-6 tracking-widest text-center">
-    私が担当させて頂きます
+<div class="bg-white w-full rounded-3xl p-8 py-5 shadow-xl border-4 border-white max-w-4xl mx-auto text-[18px]">
+  <span class="text-brand-mint font-bold tracking-widest text-sm">AGENT</span>
+  <h2 class="text-2xl md:text-3xl font-black text-brand-blue mb-4">担当者</h2>
   </p>
 
   <div class="flex flex-col items-center">
@@ -118,7 +149,7 @@
     <!-- 名前 -->
     <div class="text-center mb-4">
       <p class="text-xs text-gray-500 font-bold mb-1">
-        株式会社 ソニックジャパン さいたま支店
+        株式会社ソニックジャパン さいたま支店 所属
       </p>
  
       <h2 class="text-2xl font-black text-brand-blue mb-2">
@@ -150,7 +181,7 @@
 
     <!-- メッセージ（バージョンA） -->
     <div class="w-full max-w-md md:max-w-none text-center bg-green-50/80 p-6 md:p-6 rounded-3xl border border-green-100 mx-auto">
-     <div class="font-bold text-[13px] sm:text-[12px] md:text-base leading-6 md:leading-relaxed text-brand-blue text-center">
+     <div class="font-bold text-[13px] sm:text-[12px] md:text-base leading-snug md:leading-relaxed text-brand-blue text-center">
 
   <!-- PC用（md以上）：上2行 -->
   <div class="hidden md:block space-y-2">
@@ -159,14 +190,14 @@
   </div>
 
   <!-- スマホ用（md未満）：上3行 -->
-  <div class="md:hidden space-y-2">
+  <div class="md:hidden space-y-1">
     <div>公的制度をわかりやすく整理し、</div>
     <div>そのうえで、あなたに本当に必要な</div>
     <div>保障を一緒に考えます。</div>
   </div>
 
   <!-- ここで区切る（共通） -->
-  <div class="mt-8 md:mt-8 space-y-2">
+  <div class="mt-8 md:mt-8 space-y-1">
     <div>そして定期的な見直しにより、</div>
     <div class="text-brand-mint front-semibold md:text-lg whitespace-nowrap tracking-tight">その時々に合った最適な状態を保ちます。</div>
   </div>
@@ -178,9 +209,9 @@
 </div>
     </header> <!-- 【2枚目】対応分野（3×2・改行統一・アイコン少し大きく） -->
 <section class="py-0 px-3 md:px-4">
-    <div class="bg-white/80 w-full max-w-sm mx-auto rounded-3xl p-5 sm:p-6 md:p-10 shadow-xl border-4 border-white md:max-w-4xl md:mx-auto text-center">
+    <div class="bg-white/80 w-full max-w-4xl mx-auto rounded-3xl p-5 sm:p-6 md:p-10 shadow-xl border-4 border-white md:max-w-4xl md:mx-auto text-center">
     <span class="text-brand-mint font-bold tracking-widest text-sm">SERVICE</span>
-    <h2 class="text-2xl md:text-3xl font-black text-brand-blue mb-6">対応分野</h2>
+    <h2 class="text-2xl md:text-3xl font-black text-brand-blue mb-4">対応分野</h2>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
 
@@ -247,29 +278,29 @@
     </div>
   </div>
    <!-- 自己紹介（PROFILE）最適化版 -->
-<section class="py-12 md:py-12 px-3 md:px-4">
-  <div class="w-full max-w-sm mx-auto md:max-w-4xl">
-    <div class="bg-white rounded-3xl p-4 md:p-10 shadow-md">
+<section class="py-12 md:py-12 px-0 md:px-4">
+  <div class="w-full max-w-4xl mx-auto">
+    <div class="bg-white w-full rounded-3xl p-4 md:p-10 shadow-md">
       
-      <div class="text-center mb-6 md:mb-10">
-        <span class="text-brand-mint font-bold tracking-widest text-sm block mb-2">PROFILE</span>
-        <h2 class="text-3xl font-black text-brand-blue">自己紹介</h2>
+      <div class="text-center mb-4 md:mb-6">
+        <span class="text-brand-mint font-bold tracking-widest text-sm">PROFILE</span>
+        <h2 class="text-2xl md:text-3xl font-black text-brand-blue">自己紹介</h2>
       </div>
 
       <!-- ① 基本情報（軽め） -->
       <div class="bg-green-50/60 rounded-2xl p-4 md:p-8 border border-green-100 text-center mb-6 md:mb-8">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 text-center">
           <div class="bg-white rounded-2xl p-4 border border-gray-100">
-            <p class="text-xs text-gray-500 font-bold mb-1">出身</p>
-            <p class="font-bold text-sm text-brand-blue">東京都品川区</p>
+            <p class="text-xs text-gray-500 font-bold mb-1">相談実績</p>
+            <p class="font-bold text-sm text-brand-blue">年間300件以上</p>
           </div>
           <div class="bg-white rounded-2xl p-4 border border-gray-100">
-            <p class="text-xs text-gray-500 font-bold mb-1">居住地</p>
-            <p class="font-bold text-sm text-brand-blue">越谷レイクタウン</p>
+            <p class="text-xs text-gray-500 font-bold mb-1">強み</p>
+            <p class="font-bold text-sm text-brand-blue">公的制度を踏まえた設計</p>
           </div>
           <div class="bg-white rounded-2xl p-4 border border-gray-100">
-            <p class="text-xs text-gray-500 font-bold mb-1">家族</p>
-            <p class="font-bold text-sm text-brand-blue">妻・娘・息子</p>
+            <p class="text-xs text-gray-500 font-bold mb-1">経験</p>
+            <p class="font-bold text-sm text-brand-blue">保険業界8年・学校担当6年</p>
           </div>
         </div>
       </div>
@@ -304,11 +335,11 @@
         <p class="text-sm md:text-base font-bold text-gray-700 leading-relaxed">
           ご相談を受ける中で、<br>
           <span class="block text-center text-brand-mint font-black whitespace-nowrap">
-          「まずは公的制度をきちんと整理すること」
+          まずは公的制度をきちんと整理すること<br>
           </span>の大切さを実感しました。<br>
           <br>
           “ なんとなく入る保険 ” ではなく、<br>
-          <mark class="bg-yellow-200">“ 納得して選べる保障 ” </mark>を、<br class="md:hidden">一緒に考えることを大切にしています。
+          <mark class="bg-yellow-200/50 px-1 rounded font-bold">“ 納得して選べる保障 ” </mark>を、<br class="md:hidden"><span class="whitespace-nowrap">一緒に考えることを大切にしています。</span>
         </p>
       </div>
 
@@ -316,23 +347,23 @@
   </div>
 </section>
            <!-- 面談方法について -->
-<section class="py-0 px-2 md:px-4">
-  <div class="w-full md:max-w-4xl md:mx-auto">
+<section class="py-0 px-0 md:px-4">
+  <div class="w-full max-w-4xl mx-auto">
     <div class="bg-white rounded-[32px] p-6 md:p-8 shadow-lg border border-gray-100">
       
-      <div class="text-center mb-10">
-        <span class="text-brand-mint font-bold tracking-widest text-sm block mb-2">MEETING</span>
-        <h2 class="text-2xl md:text-3xl font-black text-brand-blue">面談方法について</h2>
+      <div class="text-center mb-6">
+        <span class="text-brand-mint font-bold tracking-widest text-sm">MEETING</span>
+        <h2 class="text-2xl md:text-3xl font-black text-brand-blue">面談方法</h2>
         <p class="text-sm md:text-base font-bold text-gray-600 mt-3 leading-relaxed">
           ご希望のスタイルでご相談いただけます。<br>
           まずはお気軽にご希望をお聞かせください。
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-y-4 md:gap-y-6 gap-x-3">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-y-4 md:gap-y-6 gap-x-6">
         <!-- オンライン -->
-        <div class="bg-gray-50 rounded-xl p-5 md:p-6 border border-gray-100 shadow-md hover:shadow-lg transition min-h-[260px]">
-          <div class="flex flex-col items-center text-center mb-6">
+        <div class="bg-gray-50 rounded-xl p-3 md:p-4 border border-gray-100 shadow-md hover:shadow-lg transition min-h-[260px]">
+          <div class="flex flex-col items-center text-center mb-4">
             <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-sm text-4xl mb-3">
               <i class="fas fa-video text-brand-mint"></i>
             </div>
@@ -342,7 +373,7 @@
             </div>
           </div>
 
-          <ul class="text-sm font-bold text-gray-500 space-y-2 leading-relaxed text-center list-none">
+          <ul class="text-xs font-bold text-gray-500 space-y-1 leading-relaxed text-center list-none">
             <li>・ご自宅から相談可能</li>
             <li>・画面共有で丁寧に説明</li>
             <li>・夜間・短時間も対応</li>
@@ -350,8 +381,8 @@
         </div>
 
         <!-- 対面 -->
-        <div class="bg-gray-50 rounded-xl p-5 md:p-6 border border-gray-100 shadow-md hover:shadow-lg transition min-h-[260px]">
-           <div class="flex flex-col items-center text-center mb-6">
+        <div class="bg-gray-50 rounded-xl p-3 md:p-4 border border-gray-100 shadow-md hover:shadow-lg transition min-h-[260px]">
+           <div class="flex flex-col items-center text-center mb-4">
             <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-sm text-4xl mb-3">
               <i class="fas fa-handshake text-brand-mint"></i>
             </div>
@@ -361,7 +392,7 @@
             </div>
           </div>
 
-          <ul class="text-sm font-bold text-gray-500 space-y-2 leading-relaxed text-center list-none">
+          <ul class="text-xs font-bold text-gray-500 space-y-1 leading-relaxed text-center list-none">
             <li>・ご自宅／職場／カフェなど</li>
             <li>・資料を見ながら整理</li>
             <li>・日時・場所は柔軟対応</li>
@@ -378,24 +409,35 @@
     <section class="pt-12 pb-4 px-4">
   <div class="max-w-4xl mx-auto">
     <div class="bg-white rounded-[40px] pt-4 pb-8 px-8 md:pt-6 md:pb-12 md:px-12 shadow-lg border border-gray-100">
-        <section id="contact" class="pt-6 pb-4 px-4">
+        <section id="contact" class="pt-4 pb-4 px-4">
         <div class="max-w-xl mx-auto">
             <div class="text-center mb-8"> <span
                     class="text-brand-mint font-bold tracking-widest text-sm">CONTACT</span>
                 <h2 class="text-2xl md:text-3xl font-black text-brand-blue mb-4">お問合せ・無料相談</h2>
                 <p class="font-bold text-gray-500 text-sm"> 些細なご相談でも構いません。<br> お気軽にご相談下さい！ </p>
             </div> <!-- LINEボタン -->
-            <div class="text-center mb-12"> <!-- リンク先をLINE友だち追加URLに --> <a href="https://line.me/R/ti/p/@207zsbly"
+            <div class="text-center mb-4"> <!-- リンク先をLINE友だち追加URLに --> <a href="https://line.me/R/ti/p/@207zsbly"
                     class="inline-flex items-center justify-center bg-[#06C755] text-white w-full max-w-sm py-4 rounded-full shadow-lg hover:opacity-90 transition transform hover:-translate-y-1">
                     <i class="fab fa-line text-3xl mr-3"></i> <span class="text-lg font-black">公式LINEで相談する</span> </a>
-                  </div> <!-- 区切り線 -->
-            <div class="flex items-center justify-center mb-12">
+                  </div> 
+                  <!-- LINE注意書き -->
+                   <p class="text-[11px] sm:text-xs text-gray-500 text-center mt-0 mb-8 leading-sung max-w-md mx-auto">
+                    LINEは日程調整等にご利用いただけます。<br>
+                    正式なご相談は対面またはWEB面談で承ります。
+                   </p>
+                  <!-- 区切り線 -->
+            <div class="flex items-center justify-center mb-8 md:mb-12">
                 <div class="h-px bg-gray-200 w-full"></div> <span
-                    class="bg-white px-4 text-xs text-gray-400 font-bold whitespace-nowrap">または以下のフォームから</span>
+                    class="bg-white px-4 text-xs text-gray-600 font-semibold whitespace-nowrap">メールでのご相談はこちらから</span>
                 <div class="h-px bg-gray-200 w-full"></div>
             </div> <!-- フォーム -->
-            <form action="https://script.google.com/macros/s/AKfycbxs5pDtiSiCjLT_IOCYzN87G0WynEyTks6JxBnoWdOYvBDnrwrMibqiO_-UOGHikGCv/exec" method="POST" class="space-y-6"> <!-- お問合せ内容 -->
-                <div> <label class="block text-sm font-bold text-gray-700 mb-2 ml-2">お問合せ内容</label>
+            <form id="contactForm" action="https://script.google.com/macros/s/AKfycbxs5pDtiSiCjLT_IOCYzN87G0WynEyTks6JxBnoWdOYvBDnrwrMibqiO_-UOGHikGCv/exec" method="POST" class="space-y-6"> <!-- お問合せ内容 -->
+              <!-- honeypot（人間には見えない） -->
+              <input type="text" name="company" tabindex="-1" autocomplete="off"
+               style="position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;">
+              <div>
+              <label class="block text-sm font-bold text-gray-700 mb-1 ml-2">お問合せ内容</label>  
+              <div> 
                     <div class="flex gap-4"> <label class="flex-1 cursor-pointer"> <input type="radio" name="type"
                                 value="consultation" class="peer sr-only" checked>
                             <div
@@ -407,21 +449,45 @@
                                 class="text-center py-3 border border-gray-200 rounded-full peer-checked:bg-green-50 peer-checked:border-brand-mint peer-checked:text-brand-mint font-bold text-sm transition text-gray-500">
                                 ご質問など </div>
                         </label> </div>
-                </div> <!-- お名前 -->
-                <div> <label for="name" class="block text-sm font-bold text-gray-700 mb-1 ml-2">お名前</label> <input
-                        type="text" id="name" name="name" class="form-input" placeholder="例：保険 太郎"> </div> <!-- ふりがな -->
-                <div> <label for="furigana" class="block text-sm font-bold text-gray-700 mb-1 ml-2">ふりがな</label> <input
-                        type="text" id="furigana" name="furigana" class="form-input" placeholder="例：ほけん たろう"> </div>
+                </div> 
+                <!-- お名前 -->
+                <div>
+                  <label for="name" class="block text-sm font-bold text-gray-700 mb-1 ml-2">
+                    お名前
+                    <span class="text-red-500 text-[10px] ml-1 opacity-80">必須</span>
+                  </label>
+                  <input
+                    type="text" id="name" name="name" class="form-input" placeholder="例：鈴木 一郎" required autocomplete="name">
+                </div>
+                <!-- ふりがな -->
+                <div>
+                  <label for="furigana" class="block text-sm font-bold text-gray-700 mb-1 ml-2">
+                    ふりがな
+                  </label>
+                  <input
+                    type="text" id="furigana" name="furigana" class="form-input" placeholder="例：すずき いちろう"> </div>
                 <!-- メール -->
-                <div> <label for="email" class="block text-sm font-bold text-gray-700 mb-1 ml-2">メールアドレス</label> <input
-                        type="email" id="email" name="email" class="form-input" placeholder="例：taro@example.com"> </div>
+                <div> 
+                  <label for="email" class="block text-sm font-bold text-gray-700 mb-1 ml-2">
+                    メールアドレス
+                    <span class="text-red-500 text-[10px] ml-1 opacity-80">必須</span>
+                  </label>
+                  <input
+                    type="email" id="email" name="email" class="form-input" placeholder="例：name@example.com" required autocomplete="email">
+                </div>
                 <!-- 電話 -->
-                <div> <label for="phone" class="block text-sm font-bold text-gray-700 mb-1 ml-2">電話番号</label> <input
-                        type="tel" id="phone" name="phone" class="form-input" placeholder="例：090-0000-0000"> </div>
+                <div>
+                  <label for="phone" class="block text-sm font-bold text-gray-700 mb-1 ml-2">
+                    電話番号
+                  </label>
+                  <input
+                    type="tel" id="phone" name="phone" class="form-input" placeholder="例：090-0000-0000">
+                </div>
                 <!-- 内容 -->
 <div>
   <label for="message" class="block text-sm font-bold text-gray-700 mb-1 ml-2">
     ご質問・ご相談内容
+    <span class="text-red-500 text-[10px] ml-1 opacity-80">必須</span>
   </label>
 
   <textarea
@@ -433,16 +499,48 @@
     placeholder="ご自由にご記入ください">
   </textarea>
 </div>
-
-<div class="g-recaptcha" data-sitekey="6Lc9LngsAAAAAP8ZOYrlD0KxVAN1tjl9LiFyJoLQ" data-size="compact"></div>
-
+<!-- invisible reCAPTCHA(表示なし) -->
+ <div class="g-recaptcha" data-sitekey="6Lc9LngsAAAAAP8ZOYrlD0KxVAN1tjl9LiFyJoLQ" data-size="invisible" data-callback="onRecaptchaSuccess"></div>
+</div>
 <div class="pt-4">
-  <button type="submit"
-    class="w-full bg-brand-mint text-white font-bold text-lg py-4 rounded-full shadow-lg hover:bg-emerald-600 transition transform hover:-translate-y-0.5">
+  <button type="button"
+    class="w-full bg-brand-mint text-white font-bold text-lg py-4 rounded-full shadow-lg hover:bg-emerald-600 transition transform hover:-translate-y-0.5"
+    onclick="grecaptcha.execute();">
     送信する
   </button>
 </div>
-            </form> <!-- 連絡先情報 -->
+            </form>
+            <!-- プライバシーポリシー -->
+<div class="mt-6 w-full max-w-x1 mx-auto px-5 sm:px-8 py-5 sm:py-7 bg-gray-50 border border-gray-200 rounded-x1 shadow-sm">
+  <h3 class="text-sm font-semibold text-gray-700 mb-3 text-center sm:text-left">
+    個人情報の取扱いについて
+  </h3>
+
+  <p class="text-xs text-gray-600 leading-relaxed mb-3">
+    お問合せ時にご入力いただいた個人情報は、以下の目的で利用いたします。
+  </p>
+
+  <ul class="text-xs text-gray-600 leading-snug list-disc pl-5 sm:pl-6 mb-3 space-y-0.5">
+    <li>お問い合わせへの回答</li>
+    <li>ご相談対応</li>
+    <li>保険商品・関連サービスのご案内</li>
+  </ul>
+
+  <p class="text-xs text-gray-600 leading-relaxed mb-3">
+    取得した個人情報は適切に管理し、法令に基づく場合を除き第三者へ提供しません。
+  </p>
+
+  <p class="text-xs text-gray-600 leading-relaxed">
+    株式会社ソニックジャパンの<a href="https://www.sonicjapan.info/assets/pdf/privacy_policy.pdf"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="text-brand-blue underline hover:opacity-80">
+       プライバシーポリシー
+    </a>
+    に基づき、個人情報を取り扱います。
+  </p>
+</div>
+            <!-- 連絡先情報 -->
             <div class="mt-4 space-y-2 text-center">
 
   <div class="flex items-center justify-center gap-2 text-lg front-semibold text-gray-700">
@@ -453,6 +551,14 @@
   </div>
 
 </div>
+<div class="text-[11px] sm:text-xs text-gray-500 text-center mt-3 liadind-relaxed">
+  <p>所属代理店</p>
+  <p class="mt-1">株式会社ソニックジャパン さいたま支店</p>
+  <p>〒330-0841 埼玉県さいたま市大宮区東町1-16-2 <br class="sm:hidden">大宮東町第一生命ビル2F</p>
+</div>
+<p class="text-[11px] sm:text-xs text-gray-500 text-center mt-3 liadind-relaxed">
+  <span class="whitespace-nowrap">当ホームページは株式会社ソニックジャパン所属の</span><br class="sm:hidden">保険募集人 清水良成が運営しております。
+</p>
 <p class="text-xs text-gray-400 text-center mt-4 mb-0">
   &copy; 2026 FP Shimizu
 </p>
@@ -460,6 +566,12 @@
 </div>
 </div>
 </section>
+<script>
+function onRecaptchaSuccess(token) {
+  document.getElementById("contactForm").submit();
+}
+</script>
 
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>
 </html>
