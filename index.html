@@ -505,7 +505,7 @@
 <div class="pt-4">
   <button type="button"
     class="w-full bg-brand-mint text-white font-bold text-lg py-4 rounded-full shadow-lg hover:bg-emerald-600 transition transform hover:-translate-y-0.5"
-    onclick="grecaptcha.execute();">
+    onclick="handleSubmit();">
     送信する
   </button>
 </div>
@@ -567,6 +567,16 @@
 </div>
 </section>
 <script>
+  function handleSubmit() {
+  const form = document.getElementById("contactForm");
+
+  if (!form.checkValidity()) {
+    form.reportValidity(); // 必須項目を表示
+    return;
+  }
+
+  grecaptcha.execute(); // OKならreCAPTCHA
+}
 function onRecaptchaSuccess(token) {
   document.getElementById("contactForm").requestSubmit();
 }
