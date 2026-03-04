@@ -571,15 +571,17 @@
   function handleSubmit() {
   const form = document.getElementById("contactForm");
 
-  if (!form.checkValidity()) {
-    form.reportValidity(); // 必須項目を表示
+  if (!form.reportValidity())    // 必須項目を表示
     return;
-  }
-
+  
   grecaptcha.execute(); // OKならreCAPTCHA
 }
 function onRecaptchaSuccess(token) {
-  document.getElementById("contactForm").requestSubmit();
+  const form = document.getElementById("contactForm");
+
+  if (!form.reportValidity()) return;
+
+  form.submit();
 }
 </script>
 
