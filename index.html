@@ -101,7 +101,7 @@
                 <div
                     class="bg-white/80 W-full max-w-4xl mx-auto px-8 py-6 rounded-3xl mb-12 border-4 border-white shadow-md backdrop-blur-sm">
                     <div class="mb-8">
-    <div class="bg-white/80 w-full px-8 py-8 rounded-3xl shadow-sm backdrop-blur-sm">
+    <div class="bg-white/80 w-full px-8 py-6 rounded-3xl shadow-sm backdrop-blur-sm">
       <div class="flex justify-center">
         <h1 class="inline-block text-center text-brand-mint font-black text-2xl sm:text-3xl md:text-4xl tracking-tight tracking-normal md:tracking-wide">
             <span class="block whitespace-nowrap mx-auto">「なんとなく」ではなく、</span>
@@ -120,7 +120,7 @@
         </span>
         </p>
     </p>
-    <p class="mt-6 text-sm sm:text-base md:text-lg front-bold text-gray-800 mb-6 leading-relaxed">
+    <p class="mt-6 text-sm sm:text-base md:text-lg font-bold text-gray-800 mb-6 leading-loose sm:leading-relaxed">
      <span class="block md:inline">
     保障は「入っていること」よりも、
     </span>
@@ -362,7 +362,7 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-y-4 md:gap-y-6 gap-x-6">
         <!-- オンライン -->
-        <div class="bg-gray-50 rounded-xl p-3 md:p-4 border border-gray-100 shadow-md hover:shadow-lg transition min-h-[260px]">
+        <div class="bg-gray-50 rounded-xl p-3 md:p-4 border border-gray-100 shadow-md hover:shadow-lg transition min-h-[200px]">
           <div class="flex flex-col items-center text-center mb-4">
             <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-sm text-4xl mb-3">
               <i class="fas fa-video text-brand-mint"></i>
@@ -381,7 +381,7 @@
         </div>
 
         <!-- 対面 -->
-        <div class="bg-gray-50 rounded-xl p-3 md:p-4 border border-gray-100 shadow-md hover:shadow-lg transition min-h-[260px]">
+        <div class="bg-gray-50 rounded-xl p-3 md:p-4 border border-gray-100 shadow-md hover:shadow-lg transition min-h-[200px]">
            <div class="flex flex-col items-center text-center mb-4">
             <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-sm text-4xl mb-3">
               <i class="fas fa-handshake text-brand-mint"></i>
@@ -452,9 +452,9 @@
                 </div> 
                 <!-- お名前 -->
                 <div>
-                  <label for="name" class="block text-sm font-bold text-gray-700 mb-1 ml-2">
+                  <label for="name" class="flex items-center text-sm font-bold text-gray-700 mb-1 ml-2">
                     お名前
-                    <span class="text-red-500 text-[10px] ml-1 opacity-80">必須</span>
+                    <span class="inline-flex items-center justify-center bg-red-400 text-white text-[8px] px-[3px] py-[1px] rounded leading-none ml-1.5">必須</span>
                   </label>
                   <input
                     type="text" id="name" name="name" class="form-input" placeholder="例：鈴木 一郎" required autocomplete="name">
@@ -468,9 +468,9 @@
                     type="text" id="furigana" name="furigana" class="form-input" placeholder="例：すずき いちろう"> </div>
                 <!-- メール -->
                 <div> 
-                  <label for="email" class="block text-sm font-bold text-gray-700 mb-1 ml-2">
+                  <label for="email" class="flex items-center text-sm font-bold text-gray-700 mb-1 ml-2">
                     メールアドレス
-                    <span class="text-red-500 text-[10px] ml-1 opacity-80">必須</span>
+                    <span class="inline-flex items-center justify-center bg-red-400 text-white text-[8px] px-[3px] py-[1px] rounded leading-none ml-1.5">必須</span>
                   </label>
                   <input
                     type="email" id="email" name="email" class="form-input" placeholder="例：name@example.com" required autocomplete="email">
@@ -484,22 +484,21 @@
                     type="tel" id="phone" name="phone" class="form-input" placeholder="例：090-0000-0000">
                 </div>
                 <!-- 内容 -->
-<div>
-  <label for="message" class="block text-sm font-bold text-gray-700 mb-1 ml-2">
-    ご質問・ご相談内容
-    <span class="text-red-500 text-[10px] ml-1 opacity-80">必須</span>
-  </label>
+                <div>
+                  <label for="message" class="flex items-center text-sm font-bold text-gray-700 mb-1 ml-2">
+                    ご質問・ご相談内容
+                  <span class="inline-flex items-center justify-center bg-red-400 text-white text-[8px] px-[3px] py-[1px] rounded leading-none ml-1.5">必須</span>
+                  </label>
 
-  <textarea
-    id="message"
-    name="message"
-    rows="5"
-    required
-    form="contactForm"
-    class="w-full bg-[#f9fafb] border border-gray-200 rounded-[20px] px-5 py-4 focus:outline-none focus:border-brand-mint focus:bg-white transition"
-    placeholder="ご自由にご記入ください">
-  </textarea>
-</div>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                  class="w-full bg-[#f9fafb] border border-gray-200 rounded-[20px] px-5 py-4 focus:outline-none focus:border-brand-mint focus:bg-white transition"
+                  placeholder="ご自由にご記入ください">
+                </textarea>
+                </div>
 <!-- invisible reCAPTCHA(表示なし) -->
  <div class="g-recaptcha" data-sitekey="6Ld1mH8sAAAAAPT-K9UjzjF_Zs4iH8W3PHL-f7VZ" data-size="invisible" data-callback="onRecaptchaSuccess"></div>
 </div>
@@ -532,7 +531,7 @@
   </p>
 
   <p class="text-xs text-gray-600 leading-relaxed">
-    株式会社ソニックジャパンの<a href="https://www.sonicjapan.info/assets/pdf/privacy_policy.pdf"
+    株式会社ソニックジャパンの<a href="https://www.sonicjapan.info/privacy-policy/"
        target="_blank"
        rel="noopener noreferrer"
        class="text-brand-blue underline hover:opacity-80">
@@ -554,8 +553,13 @@
 </div>
 <div class="text-[11px] sm:text-xs text-gray-500 text-center mt-3 liadind-relaxed">
   <p>所属代理店</p>
-  <p class="mt-1">株式会社ソニックジャパン さいたま支店</p>
+  <p class="mt-1">
+  <a href="https://www.sonicjapan.info" target="_blank" rel="noopener" class="text-brand-blue text-xs underline hover:opacity-80">
+  株式会社ソニックジャパン さいたま支店
+  </a>
+  </p>
   <p>〒330-0841 埼玉県さいたま市大宮区東町1-16-2 <br class="sm:hidden">大宮東町第一生命ビル2F</p>
+  <p>TEL:048-788-5979　FAX:048-788-5980</p>
 </div>
 <p class="text-[11px] sm:text-xs text-gray-500 text-center mt-3 liadind-relaxed">
   <span class="whitespace-nowrap">当ホームページは株式会社ソニックジャパン所属の</span><br class="sm:hidden">保険募集人 清水良成が運営しております。
@@ -569,20 +573,52 @@
 </section>
 <script>
   function handleSubmit() {
-  const form = document.getElementById("contactForm");
+    const form = document.getElementById("contactForm");
+    const message = document.getElementById("message");
 
-  if (!form.reportValidity())    // 必須項目を表示
-    return;
-  
-  grecaptcha.execute(); // OKならreCAPTCHA
-}
-function onRecaptchaSuccess(token) {
-  const form = document.getElementById("contactForm");
+    // ① 「内容」だけ先に強制チェック（空なら必ず内容欄にエラー表示）
+    if (!message.value.trim()) {
+      message.setCustomValidity("ご質問・ご相談内容を入力してください。");
+    } else {
+      message.setCustomValidity("");
+    }
+    if (!message.reportValidity()) {
+      message.focus();
+      return;
+    }
+    // お名前
+    const name = document.getElementById("name");
+    if (!name.value.trim()) {
+     name.setCustomValidity("お名前を入力してください。");
+    } else {
+     name.setCustomValidity("");
+    }
 
-  if (!form.reportValidity()) return;
+    // メールアドレス
+    const email = document.getElementById("email");
+    if (!email.value.trim()) {
+     email.setCustomValidity("メールアドレスを入力してください。");
+    } else {
+     email.setCustomValidity("");
+    }
 
-  form.requestSubmit();
-}
+    // ② 他の必須もチェック（空ならその項目にエラー表示）
+    if (!form.reportValidity()) return;
+    
+
+    // ③ OKならinvisible reCAPTCHA
+    grecaptcha.execute();
+  }
+
+  function onRecaptchaSuccess(token) {
+    const form = document.getElementById("contactForm");
+
+    // ④ reCAPTCHA後も念のため検証（途中で消された場合に備える）
+    if (!form.reportValidity()) return;
+
+    // ⑤ ここで本送信（submit扱い）
+    form.requestSubmit();
+  }
 </script>
 
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
